@@ -87,10 +87,10 @@ namespace Utils
         private static void onTitleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var chart = (d as WindowsFormChart)?.wfchart;
-            chart.Titles.Clear();
+            chart?.Titles.Clear();
             if (e.NewValue != null)
             {
-                chart.Titles.Add((string)e.NewValue);
+                chart?.Titles.Add((string)e.NewValue);
             }
         }
         #endregion
